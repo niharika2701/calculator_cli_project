@@ -1,5 +1,10 @@
 # Calculator Project
 
+[![CI Pipeline](https://github.com/niharika2701/calculator_cli_project/actions/workflows/ci.yml/badge.svg)](https://github.com/niharika2701/calculator_cli_project/actions/workflows/ci.yml)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A professional command-line calculator built with Python, following TDD (Test-Driven Development) and software engineering best practices such as AAA (Arrange-Act-Assert) and DRY (Don't-Repeat-Yourself) principles.
 
 ## Features
@@ -21,8 +26,8 @@ A professional command-line calculator built with Python, following TDD (Test-Dr
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/calculator_project.git
-cd calculator_project
+git clone https://github.com/niharika2701/calculator_cli_project.git
+cd calculator_cli_project
 ```
 
 ### 2. Create and activate virtual environment
