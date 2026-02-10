@@ -25,3 +25,25 @@ class TestCLI:
         
         captured = capsys.readouterr()
         assert "Cannot divide by zero" in captured.out
+    
+    @patch('builtins.input', side_effect=['5'])
+    @patch('builtins.print')
+
+    def test_exit_option(self, mock_print, mock_input):
+    
+        result = self.cli.run_once()
+        assert result is False
+
+    @patch('builtins.input', side_effect=['99', '5'])
+    def test_invalid_choice(self, mock_input, capsys):
+    
+        self.cli.run_once()
+        captured = capsys.readouterr()
+        assert "Invalid choice" in captured.out
+
+    @patch('builtins.input', side_effect=['1', 'abc', '5'])
+    def test_invalid_number_input(self, mock_input, capsys):
+    
+        self.cli.run_once()
+        captured = capsys.readouterr()
+        assert "Invalid input" in captured.out
